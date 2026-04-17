@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciple</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="fade-in-page">
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Disciple</a>
+            <nav class="nav-links">
+                <a href="#strategies">Стратегии</a>
+                <a href="#marketing">Маркетинг</a>
+                <a href="#branding">Брендинг</a>
+                <a href="#naming">Нейминг</a>
+                <a href="#consulting">Консалтинг</a>
+                <a href="#projects">Проекты</a>
+                <a href="#" onclick="event.preventDefault(); openModal('about-modal')">О нас</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="header-controls">
+                <div class="lang-switch">
+                    <a href="index.html" class="active">RU</a>
+                    <a href="index-en.html">EN</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="fade-in-content">
+        <!-- СТРАТЕГИИ (Interactive) -->
+        <section id="strategies" class="apple-section interactive-section" onclick="openModal('strategies-modal')">
+            <div class="section-hero">
+                <h2>Стратегии</h2>
+                <p>Разрабатываем планы достижения целей.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); openModal('strategies-modal')">Узнать больше</button>
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); openContactForm('Стратегии')">Обсудить проект</button>
+                </div>
+            </div>
+            <div class="section-cover">
+                <img src="./public/images/pic1.png" alt="Стратегии">
+            </div>
+        </section>
+
+        <!-- МАРКЕТИНГ (Interactive) -->
+        <section id="marketing" class="apple-section interactive-section gray-bg" onclick="openModal('marketing-modal')">
+            <div class="section-hero">
+                <h2>Маркетинг</h2>
+                <p>Продвигаем бренды в digital.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); openModal('marketing-modal')">Узнать больше</button>
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); openContactForm('Маркетинг')">Обсудить проект</button>
+                </div>
+            </div>
+            <div class="section-cover">
+                <img src="./public/images/pic2.png" alt="Маркетинг">
+            </div>
+        </section>
+
+        <!-- БРЕНДИНГ (Static) -->
+        <section id="branding" class="apple-section static-section">
+            <div class="section-hero">
+                <h2>Брендинг</h2>
+                <p>Создаём и развиваем бренды.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); openModal('branding-modal')">Узнать больше</button>
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); openContactForm('Брендинг')">Обсудить проект</button>
+                </div>
+            </div>
+            <div class="section-cover">
+                <img src="./public/images/pic3.png" alt="Брендинг">
+            </div>
+        </section>
+
+        <!-- НЕЙМИНГ (Static) -->
+        <section id="naming" class="apple-section static-section gray-bg">
+            <div class="section-hero">
+                <h2>Нейминг</h2>
+                <p>Создаём названия для компаний и продуктов.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); openModal('naming-modal')">Узнать больше</button>
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); openContactForm('Нейминг')">Обсудить проект</button>
+                </div>
+            </div>
+            <div class="section-cover">
+                <img src="./public/images/pic4.png" alt="Нейминг">
+            </div>
+        </section>
+
+        <!-- КОНСАЛТИНГ (Static) -->
+        <section id="consulting" class="apple-section static-section" style="border-bottom: none;">
+            <div class="section-hero">
+                <h2>Консалтинг</h2>
+                <p>Экспертная поддержка бизнеса.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); openModal('consulting-modal')">Узнать больше</button>
+                    <button class="btn btn-secondary" onclick="event.stopPropagation(); openContactForm('Консалтинг')">Обсудить проект</button>
+                </div>
+            </div>
+            <div class="section-cover">
+                <img src="./public/images/pic5.png" alt="Консалтинг">
+            </div>
+        </section>
+
+        <!-- ПРОЕКТЫ (Carousel) Inverted Black Block -->
+        <section id="projects" class="apple-section carousel-section bg-black">
+             <div class="section-hero compact">
+                <h2>Проекты</h2>
+             </div>
+             <div class="carousel-container">
+                 <div class="carousel-track" id="projects-carousel">
+                     <div class="carousel-slide interactive-slide" onclick="openModal('project1-modal')">
+                         <img src="./public/images/логонатан.png" alt="Nathan Anderson" class="carousel-img">
+                     </div>
+                     <div class="carousel-slide interactive-slide" onclick="openModal('project3-modal')">
+                         <img src="./public/images/логоуютное.jpg" alt="УЮТНОЕ ПРОСТРАНСТВО" class="carousel-img">
+                     </div>
+                     <div class="carousel-slide interactive-slide" onclick="openModal('project2-modal')">
+                         <img src="./public/images/логоколяокна.png" alt="КОЛЯ ОКНА" class="carousel-img">
+                     </div>
+                 </div>
+                 
+                 <div class="carousel-controls">
+                     <button class="carousel-btn prev" aria-label="Previous">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                     </button>
+                     <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                     </div>
+                     <button class="carousel-btn next" aria-label="Next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                     </button>
+                 </div>
+             </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="apple-footer">
+        <div class="footer-content">
+            <div id="about" class="footer-col">
+                <h4 data-i18n="footer.about_title">О НАС</h4>
+                <p data-i18n="footer.about_text">Disciple — агентство маркетинга и брендинга, создающее современные и эффективные решения для бизнеса. Мы специализируемся на стратегиях, брендинге и комплексном маркетинге.</p>
+            </div>
+            <div id="social" class="footer-col" style="text-align: left;">
+                <h4 data-i18n="footer.contact_title">СВЯЖИТЕСЬ С НАМИ</h4>
+                <div class="social-links" style="justify-content: flex-start; align-items: flex-start; display: flex; flex-direction: column; gap: 1rem;">
+                    <a href="tel:+79033637114" class="phone-link">+7 903 363 71 14</a>
+                    <a href="mailto:hello@discipleagency.ru">hello@discipleagency.ru</a>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;" class="footer-icons">
+                        <a href="https://t.me/natan_anderson" target="_blank" aria-label="Telegram" class="social-icon" style="display:flex; justify-content:center; align-items:center; transition:transform 0.3s; width:40px; height:40px; overflow:hidden; border-radius:50%;"><img src="./public/images/tg.png" alt="Telegram" style="width:100%; height:100%; object-fit:contain;"></a>
+                        <a href="https://max.ru/u/f9LHodD0cOK2ohU6UWMUIdOQGYH06No6xibVzCJrrPnC4aJIppUf8dnTX9w" target="_blank" aria-label="MAKS" class="social-icon" style="display:flex; justify-content:center; align-items:center; transition:transform 0.3s; width:40px; height:40px; overflow:hidden; border-radius:50%;"><img src="./public/images/max.png" alt="MAX" style="width:100%; height:100%; object-fit:contain;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Disciple. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- НОВЫЕ СТРАНИЦЫ (Модальные окна) -->
+    
+    <!-- Модалка Стратегии -->
+    <div id="strategies-modal" class="fullscreen-modal">
+        <button class="modal-close" onclick="closeModal('strategies-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Назад
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Стратегии</h2>
+            <div class="grid-3">
+                <div class="product-col">
+                    <img src="./public/images/pic1.1.png" alt="Корпоративная стратегия" class="prod-img">
+                    <div class="service-text-wrapper">
+                        <h3>КОРПОРАТИВНАЯ СТРАТЕГИЯ</h3>
+                        <p class="service-text">Корпоративные стратегии — это компас для роста империи: определяют, куда движется компания в целом, объединяя все направления в единую мощную траекторию. Мы фокусируемся на диверсификации рынков, слияниях и глобальном лидерстве, чтобы ваш бизнес не просто выживал, а доминировал.</p>
+                        <p class="service-text">С нашей экспертизой вы получите roadmap для масштабирования, где каждый шаг усиливает бренд и капитал.</p>
+                    </div>
+                </div>
+                <div class="product-col">
+                    <img src="./public/images/pic1.2.png" alt="Бизнес стратегия" class="prod-img">
+                    <div class="service-text-wrapper">
+                        <h3>БИЗНЕС СТРАТЕГИЯ</h3>
+                        <p class="service-text">Бизнес-стратегии — сердце конкурентного преимущества: они превращают вызовы рынка в возможности для прорыва. Мы разрабатываем тактики для конкретных направлений — от дифференциации продуктов до лидерства по издержкам, обеспечивая устойчивый рост и лояльность клиентов. Ваш бизнес станет agile-машиной, готовой к трендам.</p>
+                    </div>
+                </div>
+                <div class="product-col">
+                    <img src="./public/images/pic1.3.png" alt="Функциональная стратегия" class="prod-img">
+                    <div class="service-text-wrapper">
+                        <h3>ФУНКЦИОНАЛЬНАЯ СТРАТЕГИЯ</h3>
+                        <p class="service-text">Функциональные стратегии — это точечные удары по эффективности: маркетинг, финансы, HR и производство работают как слаженный механизм. Мы оптимизируем каждый блок под общую цель — от KPI по продажам до инноваций в цепочке поставок, минимизируя риски и максимизируя ROI.</p>
+                        <p class="service-text">Результат: компания, где все на своих местах, а стратегия — на шаг впереди.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Маркетинг -->
+    <div id="marketing-modal" class="fullscreen-modal gray-bg">
+        <button class="modal-close btn-modal-back" onclick="closeModal('marketing-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Назад
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Маркетинг</h2>
+            <div class="grid-3">
+                <div class="product-col">
+                    <img src="./public/images/pic2.2.png" alt="Диджитал Маркетинг" class="prod-img">
+                    <div class="service-text-wrapper">
+                        <h3>ДИДЖИТАЛ МАРКЕТИНГ</h3>
+                        <p class="service-text">Наша команда не только продвигает ваш бренд в интернете, но и создаёт для вас уникальные веб-решения: будь то интернет-магазины с удобным интерфейсом, одностраничные рекламные сайты, которые зацепят клиента с первого взгляда, или корпоративные сайты, отражающие индивидуальность вашего бизнеса.</p>
+                    </div>
+                </div>
+                <div class="product-col">
+                    <img src="./public/images/pic2.3.png" alt="SEO" class="prod-img">
+                    <div class="service-text-wrapper">
+                        <h3>SEO</h3>
+                        <p class="service-text">Помогаем вашим сайтам подниматься в топ поисковых систем от подбора ключевых слов до креативной стратегии контента и бесшовной технической оптимизации.</p>
+                    </div>
+                </div>
+                <div class="product-col">
+                    <img src="./public/images/pic2.4.png" alt="SMM" class="prod-img">
+                    <div class="service-text-wrapper">
+                        <h3>SMM</h3>
+                        <p class="service-text">Создаем SMM присутствие для вашего бренда в ключевых русскоязычных платформах от VK и Telegram до Яндекс Дзен. Осуществляем полный цикл от нуля до ежедневного роста аудитории и конверсий.</p>
+                        <p class="service-text"><b>Разработка VK-страницы</b> уникальный дизайн, контент-план, автоматизация постинга и вовлечение сообщества.</p>
+                        <p class="service-text"><b>Ведение Telegram-канала</b> создание контента под вашу ЦА, рассылки, опросы, интеграция с ботами.</p>
+                        <p class="service-text"><b>Создание чат-ботов</b> умные чат-боты для Telegram и VK, поддержка 24/7, автоматический сбор лидов.</p>
+                        <p class="service-text"><b>Оформление и ведение Дзена</b> нативный контент с SEO, наращивание просмотров и постоянный трафик на сайт.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка О НАС -->
+    <div id="about-modal" class="fullscreen-modal gray-bg">
+        <button class="modal-close btn-modal-back" onclick="closeModal('about-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Назад
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">О нас</h2>
+            <div class="about-premium-layout max-w-1000 mx-auto" style="padding: 0 1rem;">
+                <div class="text-block" style="margin-bottom: 4rem; text-align: center;">
+                    <p class="desc-text" style="font-size: 1.35rem; line-height: 1.7; display: inline-block; max-width: 800px; text-align: center;">Disciple — агентство маркетинга и брендинга, создающее современные и эффективные решения для бизнеса. Мы специализируемся на стратегиях, брендинге и комплексном маркетинге, обеспечивая вашему бренду тотальное доминирование на рынке.</p>
+                </div>
+                <div class="diploma-grid-large" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; width: 100%;">
+                    <img src="./public/images/svid.png" alt="Свидетельство 1" class="achiev-img br-20 hover-scale" style="width: 100%; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+                    <img src="./public/images/svid2.jpg" alt="Свидетельство 2" class="achiev-img br-20 hover-scale" style="width: 100%; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Брендинг -->
+    <div id="branding-modal" class="fullscreen-modal">
+        <button class="modal-close btn-modal-back" onclick="closeModal('branding-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Назад
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Брендинг</h2>
+            <div class="split-content max-w-1000 mx-auto grid-2">
+                <div class="text-block">
+                    <p class="desc-text text-left" style="font-size: 1.35rem; line-height: 1.7;">Сильный бренд — это эмоции и доверие, которые превращают зрителей в постоянных клиентов.<br><br>Мы берём вашу идею и делаем из неё узнаваемый бренд: анализируем аудиторию, создаём уникальный стиль и позиционирование.</p>
+                </div>
+                <div class="image-block achiev-card">
+                    <img src="./public/images/pic3.png" alt="Брендинг" class="achiev-img br-20" style="object-fit: cover; max-height: 400px; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Нейминг -->
+    <div id="naming-modal" class="fullscreen-modal gray-bg">
+        <button class="modal-close btn-modal-back" onclick="closeModal('naming-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Назад
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Нейминг</h2>
+            <div class="split-content max-w-1000 mx-auto grid-2">
+                <div class="text-block">
+                    <p class="desc-text text-left" style="font-size: 1.35rem; line-height: 1.7;">Создаём названия как ювелирное изделие: из глубокого анализа, творческого креатива и тестирования гипотез рождается имя, которое будет безотказно работать на ваш бизнес десятилетиями.</p>
+                </div>
+                <div class="image-block achiev-card">
+                    <img src="./public/images/pic4.png" alt="Нейминг" class="achiev-img br-20" style="object-fit: cover; max-height: 400px; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка Консалтинг -->
+    <div id="consulting-modal" class="fullscreen-modal">
+        <button class="modal-close btn-modal-back" onclick="closeModal('consulting-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Назад
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Консалтинг</h2>
+            <div class="split-content max-w-1000 mx-auto grid-2">
+                <div class="text-block">
+                    <p class="desc-text text-left" style="font-size: 1.35rem; line-height: 1.7;">Проводим квалифицированную консультацию по маркетингу и за 60 минут разбираем Вашу ситуацию в реальном времени.<br><br>Результат: 3-5 конкретных тактических шагов для мгновенного роста и детальный чек-лист на ближайший месяц.</p>
+                </div>
+                <div class="image-block achiev-card">
+                    <img src="./public/images/pic5.png" alt="Консалтинг" class="achiev-img br-20" style="object-fit: cover; max-height: 400px; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалки Проектов -->
+    <div id="project1-modal" class="fullscreen-modal">
+        <button class="modal-close" onclick="closeModal('project1-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Проекты
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Интернет-магазин премиальной женской спортивной одежды</h2>
+            <div class="project-details">
+                <img src="./public/images/логонатан.png" alt="Nathan Anderson" class="project-hero-img">
+                <div class="case-study-body">
+                  
+                   <h3>Краткая история</h3>
+                   <p>Перед нами стояла задача создать с нуля бренд женской спортивной одежды, который будет ассоциироваться с элегантностью, эстетикой и премиальным качеством. Мы разработали концепцию бренда, спроектировали дизайн самой одежды, подобрали цветовую палитру и запустили полноценный интернет-магазин с интеграцией в соцсети.</p>
+                   
+                   <div class="grid-2">
+                       <img src="./public/images/na1.png" alt="Дизайн N.A. 1" class="project-img vertical-img">
+                       <img src="./public/images/na2.jpg" alt="Дизайн N.A. 2" class="project-img vertical-img">
+                       <img src="./public/images/na3.png" alt="Дизайн N.A. 3" class="project-img vertical-img">
+                       <img src="./public/images/na4.png" alt="Дизайн N.A. 4" class="project-img vertical-img">
+                   </div>
+                   
+                   <h3>Что мы сделали</h3>
+                   <p><strong>Нейминг:</strong> Разработали звучное и стильное название бренда — «натан андерсон» (Nathan Anderson), а также авторские названия для каждой линейки (Спортивные костюмы: "Классика", "Палаццо", "Инсерто", "Пьега", платье "Лунго", "Корто", "Сальдо").</p>
+                   <p><strong>Брендинг и Упаковка соцсетей:</strong> Сформировали уникальное позиционирование — «Одежда с тихой роскошью». Полностью создали и оформили страницу ВКонтакте (визуальный стиль, цвета, дизайн).</p>
+                   <p><strong>Стратегия и Консалтинг:</strong> Выстроили продуктовую матрицу (от базовых футболок до премиальных костюмов).</p>
+                   <p><strong>Маркетинг:</strong> Создали интернет-магазин с продуманным UI/UX, внедрили систему быстрых заказов, промокодов и связали сайт с соцсетями.</p>
+                   
+                   <h3>Результаты</h3>
+                   <p>Бренд успешно функционирует и продает коллекции по всей РФ. Создана узнаваемая торговая марка с лояльной аудиторией и стильным представительством.</p>
+
+                   <div style="margin-top: 3rem; text-align: left;">
+                       <a href="https://nathananderson.ru/" target="_blank" class="btn btn-primary" style="display: inline-block;">Перейти на сайт</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project2-modal" class="fullscreen-modal gray-bg">
+        <button class="modal-close" onclick="closeModal('project2-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Проекты
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Салон окон и дверей</h2>
+            <div class="project-details">
+                <img src="./public/images/логоколяокна.png" alt="КОЛЯ ОКНА" class="project-hero-img">
+                <div class="case-study-body">
+                  
+                   <h3>Краткая история</h3>
+                   <p>Строительная ниша перегрета, и выделиться в ней сложно. Заказчику требовалось понятное, человечное лицо бизнеса. Коля окна - мы придумали нейминг "Koly Fenster" и зарегистрировали бренд. Бренд переводится с немецкого как "Коля Окна". Мы взяли на себя всё: от разработки имени до упаковки каталога, лидогенерации и создания фирменного сообщества в соцсетях.</p>
+                   
+                   <div class="grid-2">
+                       <img src="./public/images/kol1.png" alt="Коля Окна Работы 1" class="project-img">
+                       <img src="./public/images/kol2.png" alt="Коля Окна Работы 2" class="project-img">
+                       <img src="./public/images/kol3.jpg" alt="Коля Окна Работы 3" class="project-img">
+                       <img src="./public/images/kol4.png" alt="Коля Окна Работы 4" class="project-img">
+                   </div>
+                   
+                   <h3>Что мы сделали</h3>
+                   <p><strong>Нейминг:</strong> Придумали дружелюбное и запоминающееся название «Коля Окна», которое сокращает дистанцию с клиентом.</p>
+                   <p><strong>Брендинг и SMM-дизайн:</strong> Упаковали визуальный стиль сайта для технически сложных продуктов. Отрисовали страницу ВКонтакте, превратив ее в удобную витрину работ.</p>
+                   <p><strong>Стратегия:</strong> Сегментировали услуги (Окна, Двери, Балконы) и выстроили матрицу цен для охвата разной аудитории.</p>
+                   <p><strong>Маркетинг:</strong> Внедрили мощные инструменты лидогенерации — акцент на «бесплатный замер» и быструю консультацию.</p>
+                   
+                   <h3>Результаты</h3>
+                   <p>Бизнес получил «человечное» лицо и стабильный поток заявок на монтаж конструкций через связку «Сайт + полностью упакованная группа ВКонтакте».</p>
+
+                   <div style="margin-top: 3rem; text-align: left;">
+                       <a href="https://kolyaokna.ru/" target="_blank" class="btn btn-primary" style="display: inline-block;">Перейти на сайт</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project3-modal" class="fullscreen-modal">
+        <button class="modal-close" onclick="closeModal('project3-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Проекты
+        </button>
+        <div class="modal-content">
+            <h2 class="modal-title">Студия дизайна интерьера</h2>
+            <div class="project-details">
+                <img src="./public/images/логоуютное.jpg" alt="УЮТНОЕ ПРОСТРАНСТВО" class="project-hero-img">
+                <div class="case-study-body">
+                  
+                   <h3>Краткая история</h3>
+                   <p>Нашей задачей было создать бренд, который разрушает стереотип о ремонте как о постоянном стрессе. Мы упаковали студию ремонта так, чтобы клиенты понимали: здесь им предлагают надежность, где можно спокойно передать ключи и уехать в отпуск.</p>
+                   
+                   <div class="grid-2">
+                       <img src="./public/images/ui1.png" alt="Интерьер 1" class="project-img">
+                       <img src="./public/images/ui2.png" alt="Интерьер 2" class="project-img">
+                       <img src="./public/images/ui3.png" alt="Интерьер 3" class="project-img">
+                       <img src="./public/images/ui4.jpg" alt="Интерьер 4" class="project-img">
+                   </div>
+                   
+                   <h3>Что мы сделали</h3>
+                   <p><strong>Нейминг и Брендинг:</strong> Название «Уютное Пространство» и позиционирование: «Превращаем квартиры в настоящие оазисы». Разработан единый дизайн-код для всех площадок присутствия.</p>
+                   <p><strong>Стратегия:</strong> Внедрили в модель убойные гарантии: соблюдение сроков, гарантия 3 года и прозрачная оплата.</p>
+                   <p><strong>Маркетинг:</strong> Придумали услугу для снятия возражений — бесплатная круглосуточная трансляция ремонта через видеокамеры на объекте.</p>
+                   <p><strong>Копирайтинг:</strong> Создали мощный блок FAQ, написали живые кейсы, работающие на сайте и в VK.</p>
+                   
+                   <h3>Результаты</h3>
+                   <p>Студия позиционируется как надежный эксперт (150+ проектов). Упаковка позволила сформировать лист ожидания из клиентов на 4–6 недель вперед.</p>
+
+                   <div style="margin-top: 3rem; text-align: left;">
+                       <a href="https://upinterior.ru/" target="_blank" class="btn btn-primary" style="display: inline-block;">Перейти на сайт</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Форма Обратной Связи -->
+    <div id="contact-form-modal" class="fullscreen-modal gray-bg">
+        <button class="modal-close" onclick="closeModal('contact-form-modal')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            Отмена
+        </button>
+        <div class="modal-content form-content">
+            <h2 class="modal-title">Обсудить проект</h2>
+            <p id="form-service-subtitle" class="form-subtitle">Оформление заявки на услугу: <span>Общая</span></p>
+            
+            <!-- FormSubmit endpoint with target email -->
+            <form class="apple-form" action="https://formsubmit.co/natananderson@yandex.ru" method="POST" enctype="multipart/form-data">
+                <!-- Anti-spam honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- Subject for email -->
+                <input type="hidden" name="_subject" value="Новая заявка с сайта Disciple!">
+                <!-- Target URL after submission -->
+                <input type="hidden" name="_next" value="https://example.com/thanks.html">
+                <!-- Disable Captcha optionally -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Auto-selected Service -->
+                <input type="hidden" name="Услуга" id="hidden-service-input" value="Общая">
+                
+                <div class="form-group">
+                    <input type="text" id="name" name="Имя" required placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="Телефон" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="Email" required placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="attachment" class="file-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                        <span id="file-name">Прикрепить файл проекта...</span>
+                    </label>
+                    <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg" style="display:none;" onchange="document.getElementById('file-name').textContent = this.files[0]?.name || 'Прикрепить файл проекта...'">
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="Согласие_с_политикой" value="Да" required>
+                        <span class="checkmark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        </span>
+                        <span class="checkbox-text">
+                            Я соглашаюсь с 
+                            <a href="./public/docs/согласие_на_обработку_андерсон_текстиль_.docx" target="_blank" download>Политикой конфиденциальности</a>.
+                        </span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-btn">Обсудить проект</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
