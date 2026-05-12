@@ -238,7 +238,10 @@ body {
     background-color: var(--bg-white);
     border-bottom: 12px solid var(--bg-gray);
 }
-
+.apple-section.title {
+    min-height: 20vh;
+    padding-bottom: 40px;
+}
 .apple-section.gray-bg {
     background-color: var(--bg-gray);
     border-bottom: 12px solid var(--bg-white);
