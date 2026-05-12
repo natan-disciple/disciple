@@ -318,13 +318,13 @@ body {
     letter-spacing: -0.01em;
 }
 
-.apple-section .sextion-hero.title h1 {
+.apple-section.title .section-hero h1 {
     font-size: 4.5rem;
     font-weight: 700;
     letter-spacing: -0.05em;
     margin-bottom: 0.5rem;
 }
-.apple-section .sextion-hero.title p {
+.apple-section.title .section-hero p {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--text-gray);
