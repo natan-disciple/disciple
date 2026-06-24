@@ -490,6 +490,11 @@ body {
     object-fit: cover;
 }
 
+.carousel-img.logo-fit-contain {
+    object-fit: contain;
+}
+
+
 .carousel-controls {
     display: flex;
     justify-content: center;
@@ -739,6 +744,13 @@ body {
     max-height: 85vh;
     object-fit: cover;
     border-radius: 20px;
+}
+
+#project4-modal .standalone-screenshot {
+    aspect-ratio: auto;
+    max-height: none;
+    object-fit: contain;
+    margin: 2rem 0 3rem;
 }
 
 .results-list {
