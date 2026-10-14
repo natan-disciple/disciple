@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /*?utm_
+Disallow: /*?yclid=
+Disallow: /*?gclid=
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&from
+
+Sitemap: https://discipleagency.ru/sitemap.xml
